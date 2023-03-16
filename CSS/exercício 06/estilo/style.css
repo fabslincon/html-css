@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family= Bebas +Neue & display=swap');
+
+@font-face {
+    font-family: 'Android';
+    src: url('../fontes/idroid.otf') format('opentype');
+    font-weight: normal;
+}
+
+
+:root {
+    --cor0: #c5ebd6;
+    --cor1: #83e1ad;
+    --cor2: #3ddc84;
+    --cor3: #2fa866;
+    --cor4: #1a5c37;
+    --cor5: #063d1e;
+
+
+    --fonte-destaque: 'Bebas Neue';
+    --fonte-android: 'Android';
+}
+
+/*
+     * { seletor universal, seleciona tudo.
+*/
+
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+body {
+    background-color: #c5ebd6;
+    font-family: var(--fonte-padrao);
+}
+
+a.externo::after {
+    content: '\00A0\1F517';
+}
+
+/*min-height = altura minima do cabeçalho
+padding-top  = espaçamento do top do cabeçalho
+background-image: linear-gradient = degradê
+*/
+header {
+    background-image: linear-gradient(to bottom, var(--cor3), var(--cor5));
+    min-height: 150px;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 1px;
+}
+
+
+/*
+margin-bottom = margem em baixo do título
+font-size = tamanho da fonte da letra
+*/
+header h1 {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.696);
+    font-size: 3em;
+    margin-bottom: 20px;
+
+}
+
+
+/*
+padding-right = espaçamento da direita
+padding-left  = espaçamento da esquerda
+*/
+header p {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.696);
+    font-size: 1.2em;
+    max-width: 600px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+nav {
+    background-color: var(--cor5);
+    padding: 10px;
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.421);
+}
+
+/*
+transition-duration: é utilizado para informar o tempo de duração da animação, que pode ser definido em milissegundos ou em segundos
+*/
+nav a {
+    color: #3ddc84 ;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    transition-duration: 1s;   
+}
+
+
+/*
+:hover = cria um efeito quando o mause é posicionado em cima.
+*/
+nav a:hover {
+    background-color: black;
+    color: chartreuse;
+
+
+}
+
+/*
+   responsividade do contúdo
+
+   min-width = largura mínima
+   max-width = largura máxima
+    padding  = espaçamentos da página
+  margin:auto= ceteúdo no centro da página.
+*/
+
+/*margin-bottom = margem para o assunto principal não ficar colado no rodapé.
+
+ box-shadow = sombras no fundo página.
+
+ border-bottom-left-radius = bordas redondas da página em baixo e na esquerda.
+
+ border-bottom-right-radius= bordas redondas da página em baixo e na direita.
+*/
+main {
+    background-color: white;
+    min-width: 300px;
+    max-width: 1000px;
+    padding: 20px;
+    margin: auto;
+    margin-bottom: 30px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.42);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+/*
+    responsividade das imagens
+*/
+main img {
+    width: 100%;
+}
+
+
+main img.pequena {
+    max-width: 350;
+    display: block;
+}
+
+div.video{
+    background-color: #063d1e;
+    padding: 20px;
+    margin: 0px -20px 30px;
+    padding-bottom: 57%;
+    position: relative;
+}
+
+div.video iframe{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+
+main h1 {
+    color: #1a5c37;
+    font-family: var(--fonte-android);
+    font-weight: normal;
+    font-size: 1.8em;
+}
+
+
+main h2 {
+    font-family: var(--fonte-android);
+    color: var(--cor4);
+    font-size: 1.3em;
+    font-weight: normal;
+    background-image: linear-gradient(to right, var(--cor1), transparent);
+    text-indent: 8px;
+}
+
+/* 
+  margin-top = margem em cima do parágrafo.
+  margin-bottom = margem em baixo do parágrafo.
+  text-indent = espaçamento na primeira linha.
+  line-height = espaçamento entre as linhas.
+*/
+main p {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: justify;
+    text-indent: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 2em;
+}
+
+
+main strong {
+    color: #1a5c37;
+}
+
+main a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--cor5);
+    background-color: var(--cor1);
+    padding: 2px 6px;
+}
+
+main a:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+aside {
+    background-color: var(--cor1);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.281);
+}
+
+/*
+list-style-position: inside = posição da lista para o lado de dentro.
+
+columns = número de colunas.
+list-style-type = emojis.
+\00A0\00A0 = espaço entre os emojis e os números.
+
+ margin: topo-esquerda, topo-direita, baixo-esquerda, baixo-direita.
+
+ border-radius: topo-esquerda, topo-direita, baixo-esquerda, baixo-direita.
+*/
+
+aside h3 {
+    background-color: var(--cor4);
+    color: white;
+    font-weight: normal;
+    padding: 10px;
+    margin: -10px -10px 0px -10px;
+    border-radius: 10px 10px 0px 0px;
+
+}
+
+aside ul {
+    list-style-position: inside;
+    list-style-type: '\2714\00A0\00A0';
+    columns: 2;
+}
+
+
+footer {
+    background-color: #063d1e;
+    color: white;
+    text-align: center;
+    font-size: 0.8;
+    padding: 5px;
+
+}
